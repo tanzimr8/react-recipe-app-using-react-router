@@ -13,7 +13,7 @@ const NavComponent = () => {
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-      <NavLink to={"/"}><Navbar.Brand href="#">RECIPE APP</Navbar.Brand></NavLink>
+      <NavLink to={"/"}><Navbar.Brand>RECIPE APP</Navbar.Brand></NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -25,7 +25,7 @@ const NavComponent = () => {
             <Nav.Link><NavLink to={"/recipe/:id"}>Details</NavLink></Nav.Link>
             <Nav.Link><NavLink to={"/favorites"}>Favorites</NavLink></Nav.Link>
           </Nav>
-          <Form className="d-flex" onSubmit={handleSubmit}>
+          <Form className="d-flex" onSubmit={(e)=>{handleSubmit(e)}}>
             <Form.Control
               type="search"
               placeholder="Search"
